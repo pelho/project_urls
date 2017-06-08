@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<style>
+body {
+      background-color: #226268;
+      {% if bg_image %}background-image: url(https://2.bp.blogspot.com/-EgWGj_NIp44/V3spwExA8tI/AAAAAAAADtQ/-9V4uxYAID0E6swpveY6217DYQWr7FKQACLcB/s1600/tumblr_nqt74jq8jm1up4k22o1_1280.jpg);{% endif %}
+      background-size: cover;
+
+    }
+
+.btn-link {
+      color: #50dfec;
+      text-shadow: none;
+    }
+    .btn-link:hover {
+      color: #000000;
+    }
+</style>
+
+{% endblock styles %}
+{% block content %}
+
+<h1 class="cover-heading">Создайте свою короткую ссылку</h1>
+    <p class='lead'>Введите ссылку</p>
+<p class="lead">
+     <div class='col-sm-6 col-sm-offset-3'> 
+                <form method='POST' action='.'> {% csrf_token %}
+                    <!-- <input name='url' type='text' placeholder='Shorten your URL like http://www.codingforentrepreneurs.com' /> -->
+                    {{ form.as_p }}
+                    <input class='btn btn-danger' type='submit' value='Создать &raquo;' >
+                </form>
+            </div>
+</p>
+
+
+{% endblock content %}

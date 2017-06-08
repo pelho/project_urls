@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <title> {% block title %} Проект Александры Перехожих. {% endblock title %}</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css" rel="stylesheet" integrity="sha384-RpX8okQqCyUNG7PlOYNybyJXYTtGQH+7rIKiVvg1DLg6jahLEk47VvpUyS+E2/uJ" crossorigin="anonymous">
+    <link href="http://getbootstrap.com/examples/cover/cover.css" rel="stylesheet">
+    {% block styles %}
+    <style>
+    body {
+      background-color: #D9A6A6;
+
+    }
+
+    .btn-link {
+      color: #671919;
+      text-shadow: none;
+    }
+    .btn-link:hover {
+      color: #000000;
+    }
+    </style>
+    {% endblock styles %}
+</head>
+
+<body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+           
+            
+
+          <div class="inner cover">
+             {% block content %}
+
+            {% endblock content %}
+            
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+</body>
+</html>
