@@ -7,4 +7,4 @@
 Использовано Django версии1.10.2, gunicorn, psycopg2
 
 ## Интерфейс
-
+![alt text](desktop/1.png)
